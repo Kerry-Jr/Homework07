@@ -1,30 +1,39 @@
-
-
 function generateMarkdown(data) {
 let stringMeUp = `
-##Username
-${data.username}
-  
-#Title
-####${data.title}
-#Table of contents:
-##Description
-1.)${data.description}
-##Installation
-2.)${data.installation}
-3.)${data.usage}
-4.)${data.contributors}
-5.)${data.license}
-6.)${data.email}
+   
+   
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+ ![Github avatar](${data.answers.image})
+
+## Username
+## ${data.answers.username}
+# Title
+#### ${data.answers.title}
+# Table of contents:
+1. Description
+1. Installation
+1. Usage
+1. Test
+1. Contributors
+##### Description
+1.)${data.answers.description}
+##### Installation
+2.)${data.answers.installation}
+##### Usage
+3.)${data.answers.usage}
+##### Test
+4.)${data.answers.Test}
+##### Contributors
+5.)${data.answers.contributors}
+##### Licenses
+6.)${data.answers.license}
+##### Email
+7.)[My Email. Please click me to send a message](mailto:${data.answers.email})
+
+![Image of Kerry's App](./assets/image/readmeapp.gif)
 
 
-
-
- 
-  
-data.gitData.avatar_url
+[Github repo link](${data.answers.gitLink} "Your github repo")
   
 
   

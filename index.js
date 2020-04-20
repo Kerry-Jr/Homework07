@@ -4,15 +4,14 @@ const fs = require("fs");
 const util = require("util");
 const api = require("./utils/api");
 const generate = require("./utils/generateMarkdown");
-
 const apache = "Licensed under the [Apache License](https://spdx.org/licenses/Apache-2.0.html).";
-
 const gnu = "Licensed under the [GNUGPLv3](https://spdx.org/licenses/GPL-3.0-or-later.html).";
-
 const mit = "Licensed under the [MIT](https://spdx.org/licenses/MIT.html).";
 const isc = "Licensed under the [ISC](https://opensource.org/licenses/ISC).";
 
 const none = "No license";
+
+let answers = [];
 
 inquirer.prompt([
     {
@@ -51,7 +50,6 @@ inquirer.prompt([
             "ISC",
             "None"
         ]
-        
     },
     {
         type: "input",
@@ -61,54 +59,63 @@ inquirer.prompt([
     {
         type: "input",
         name: "email",
-        message: "What is your email address?"  
+        message: "What is your email address?"
+    },
+    {
+        type: "input",
+        name: "Test",
+        message: "How do you test the app?"
     }
-    
+
 ]).then(async answers => {
-    if(answers.license === 'Apache License 2.0'){
+    if (answers.license === 'Apache License 2.0') {
         answers.license = apache;
-    }else if (answers.license === 'gnu'){
+    } else if (answers.license === 'gnu') {
         answers.license = gnu;
-    }else if(answers.license === 'MIT'){
+    } else if (answers.license === 'MIT') {
         answers.license = mit;
-    }else if(answers.license === 'ISC'){
+    } else if (answers.license === 'ISC') {
         answers.license = isc;
-    }else if (answers.license === 'None'){
+    } else if (answers.license === 'None') {
         answers.license = none;
-    }else {
+    } else {
         answers.license = "This isn't licensed";
     }
-    
 
-
-
-   const gitData= await api.getUser(answers.username);
+    const gitData = await api.getUser(answers.username);
     console.log(gitData);
-   
-    const data = {
+
+    const rawData = {
         answers,
         gitData
-    };
-    
-    const mdFile = generate(data);
 
-    //Call api.getUser and store the data in a variable
-    //call generate(answers) and store that in a variable 
-    //then put both in an object 
-    //pass that obj into write file
+    };
+
+    console.log(gitData.avatar_url);
+    // const avatar =gitData.avatar_url;
+    // console.log(avatar);
     
-console.log(data);
+    answers.gitLink = gitData.html_url;
+    answers.image = gitData.avatar_url;
+    console.log('whathtehell');
+    console.log(answers);
+    
+    const mdFile = generate(rawData);
+    console.log('hello');
+
+
+
+    console.log(answers);
+    console.log('goodbye');
+    console.log(answers.username);
 
     fs.writeFile("README.md", mdFile, err => {
-        if(err){
+        if (err) {
             console.log(err);
             throw err
         }
     })
 
     console.log('success');
-    
-})
 
-
-
+});
