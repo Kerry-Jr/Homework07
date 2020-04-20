@@ -1,9 +1,6 @@
 function generateMarkdown(data) {
-let stringMeUp = `
-   
-   
-
- ![Github avatar](${data.answers.image})
+    let stringMeUp = `
+![Github avatar](${data.answers.image})
 
 ## Username
 ## ${data.answers.username}

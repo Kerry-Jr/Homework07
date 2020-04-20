@@ -83,28 +83,15 @@ inquirer.prompt([
     }
 
     const gitData = await api.getUser(answers.username);
-    console.log(gitData);
-
     const rawData = {
         answers,
         gitData
-
-    };
-
-    console.log(gitData.avatar_url);
-    // const avatar =gitData.avatar_url;
-    // console.log(avatar);
-    
+    };    
     answers.gitLink = gitData.html_url;
     answers.image = gitData.avatar_url;
-    console.log('whathtehell');
-    console.log(answers);
-    
+  
     const mdFile = generate(rawData);
-    console.log('hello');
-
-
-
+  
     console.log(answers);
     console.log('goodbye');
     console.log(answers.username);
@@ -115,7 +102,5 @@ inquirer.prompt([
             throw err
         }
     })
-
-    console.log('success');
-
+        console.log('success');
 });
