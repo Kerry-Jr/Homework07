@@ -4,10 +4,10 @@ const fs = require("fs");
 const util = require("util");
 const api = require("./utils/api");
 const generate = require("./utils/generateMarkdown");
-const apache = "Licensed under the [Apache License](https://spdx.org/licenses/Apache-2.0.html).";
-const gnu = "Licensed under the [GNUGPLv3](https://spdx.org/licenses/GPL-3.0-or-later.html).";
-const mit = "Licensed under the [MIT](https://spdx.org/licenses/MIT.html).";
-const isc = "Licensed under the [ISC](https://opensource.org/licenses/ISC).";
+const apache = "Licensed under [Apache License](https://spdx.org/licenses/Apache-2.0.html).";
+const gnu = "Licensed under [GNUGPLv3](https://spdx.org/licenses/GPL-3.0-or-later.html).";
+const mit = "Licensed under [MIT](https://spdx.org/licenses/MIT.html).";
+const isc = "Licensed under [ISC](https://opensource.org/licenses/ISC).";
 
 const none = "No license";
 

@@ -1,43 +1,57 @@
 
-   
-   
 
- ![Github avatar](https://avatars3.githubusercontent.com/u/59150488?v=4)
+## Kerry-jr
+# <span style="color: #459ff3;">**Project Name**</span>
+# README . md Generator
 
-## Username
-## Kerry-Jr
-# Title
-####  Unit 10 OOP Homework: Template Engine - Employee Summary
-# Table of contents:
-1. Description
-1. Installation
-1. Usage
-1. Test
-1. Contributors
-##### Description
-1.)One of the most important aspects of programming is writing code that is readable, reliable, and maintainable. Oftentimes, *how* we design our code is just as important as the code itself. In this homework assignment, your challenge is to build a Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person. Since testing is a key piece in making code maintainable, you will also be ensuring that all unit tests pass.
-##### Installation
-2.)npm i
-##### Usage
-3.)generate a webpage that displays my team's basic info
-##### Test
-4.)JEST
-##### Contributors
-5.)Tutor
-##### Licenses
-6.)No license
-##### Email
-7.)[My Email. Please click me to send a message](mailto:kerrysfs@gmail.com)
+# <span style="color: #459ff3;">**Table of Contents**</span>
+#### Good readme generator
+
+- Project Name
+- Installation
+- Screenshot
+- Technologies Used
+​- Project Description
+- Difficulties Faced
+- Future Development
+- License
+ 
+# <span style="color: #459ff3;">**Contributors**</span>
+none
+
+# <span style="color: #459ff3;">**Installation**</span>
+npm i
 
 
+# <span style="color: #459ff3;">**Screenshot** </span>
+![Image of Kerry's App](./assets/image/readmeapp.gif)
 
+
+# <span style="color: #459ff3;">**Technologies Used**</span>
+
+-Node.js
+-Javascript
+
+# <span style="color: #459ff3;">**Usage**</span>
+
+to make readme's for your projects
+
+# <span style="color: #459ff3;">**Project Description**</span>
+Build and design node application that makes readme's for your projects
+# <span style="color: #459ff3;">**Difficulties Faced**</span>
+
+-Node.js 
+
+# <span style="color: #459ff3;">**TEST**</span>
+
+jest npm test
+
+# <span style="color: #459ff3;">**License**</span>
+Licensed under [MIT](https://spdx.org/licenses/MIT.html).
+
+![Github avatar](https://avatars3.githubusercontent.com/u/59150488?v=4)
+
+[My Email. Please click me to send a message](mailto:kerrysfs@gmail.com)
 
 [Github repo link](https://github.com/Kerry-Jr "Your github repo")
-  
-
-  
- 
-  
-
-  
 
